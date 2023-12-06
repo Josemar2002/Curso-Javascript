@@ -1,3 +1,86 @@
+// // O que é uma função
+// function somar(n1, n2) {
+//     let resultado = n1 + n2;
+//     console.log("Resultado: " + resultado);
+// }
+// somar(10,5);
+
+// function nomeCompleto(nome, sobrenome) {
+//     return(`${nome} ${sobrenome}`);
+// }
+// let completo = nomeCompleto("Josemar", "Rodrigues");
+// console.log("Completo: " + completo)
+
+// function maiorDeIdade(idade) {
+//     if (idade >=18) {
+//         return true;
+
+//     }else {
+//         return false;
+//     }
+// }
+// let = idade = 10;
+// let verificacao = maiorDeIdade(idade);
+
+// if(verificacao) {
+//     console.log("E maior de idade");
+// }else{
+//     console.log("E menor de idade");
+// }
+
+// exercicio funções
+
+function calcPct(x, y) {
+    return (y / x) * 100;
+
+}
+let x = 50;
+let y = 10;
+let pct = calcPct(x, y);
+console.log(`${pct} % de ${x} é ${y}`); 
+
+function calcularImovel(metragem, quartos) {
+    let m2 = 3000;
+    let preco = 0;
+    switch (quartos) {
+
+        case 1:
+            default:
+                preco = metragem * m2;
+            break;
+    
+        case 2:
+            preco = metragem * (m2 * 1.2);
+            break;
+
+        case 3:
+            preco = metragem * (m2 * 1.5);
+            break;
+    }
+    return preco;
+}
+let metragem = 123;
+let quartos = 3;
+let preco = calcularImovel(metragem, quartos);
+console.log(`A casa custa R$ ${preco}`)
+
+function validar(usuario, senha) {
+    if (usuario === 'pedro' && senha === '123') {
+        return true;
+    }else {
+        return false ;
+    }
+}
+let usuario = "boniek";
+let senha = "1234";
+let validacao = validar(usuario, senha)
+
+if (validacao) {
+    console.log('Acesso concedido.');
+}else {
+    console.log('Acesso NEGADO!')
+}
+
 // let idade = 21;
 
 // if (idade >= 18) {
@@ -50,21 +133,21 @@
 // let Isdult = (age >= 18  ? "sim" : "Não");
 // console.log(Isdult)
 
-let profession = "bombeiro";
-console.log("Profissão: " + profession);
+// let profession = "bombeiro";
+// console.log("Profissão: " + profession);
 
-switch (profession) {
-    case "fiscal" :
-        console.log("Sua camisa será VERDE");
-        break;
-    case "bombeiro":
-        console.log("Sua camisa será VERMELHA");
-        break;
-    case "policial":
-        console.log("Sua camisa será PRETA");
-        break;
-    default:
-        console.log("Sua profissão não estar no sistema")
-        break
+// switch (profession) {
+//     case "fiscal" :
+//         console.log("Sua camisa será VERDE");
+//         break;
+//     case "bombeiro":
+//         console.log("Sua camisa será VERMELHA");
+//         break;
+//     case "policial":
+//         console.log("Sua camisa será PRETA");
+//         break;
+//     default:
+//         console.log("Sua profissão não estar no sistema")
+//         break
 
-}
+// }
