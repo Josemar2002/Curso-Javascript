@@ -38,3 +38,57 @@ console.log(carros);
 
 //4. Exiba quantos itens tem no array
 console.log(`Total de carros ${carros.length}`);
+
+// --------------------------------------------------------------
+
+//Objeto
+//Exemplos de criação
+let personagem = {
+    nome: 'Boniek',
+    idade: 90,
+    pais: 'Brasil',
+    caracteristicas: {
+        forca: 20,
+        magia:5,
+        stamina:15,
+    }
+
+}
+console.log(`A idade do personagem é igual: ${personagem.idade} e seu nome é ${personagem.nome}`)
+
+console.log(`POSSUI DE MAGIA: ${personagem.caracteristicas.magia} TEM  DE FORÇA: ${personagem.caracteristicas.forca}`)
+
+//array dentro do objeto
+
+let personagem02 = {
+    nome: 'Josemar',
+    idade:'21',
+    carros:[
+        {modelo:'Audi', cor: 'preto'},
+        {modelo: 'Ferrari', cor: 'vermelho'}
+    ]
+}
+
+console.log(personagem02.carros[1].modelo);
+
+//Função dentro do objeto
+
+let personagem03 = { 
+    nome:'Josemar',
+    cpf: 70035010665,
+    banco: 'itau',
+    cep: 45646464,
+    celular: 33993356433,
+    dados: function() {
+        return `${this.celular} ${this.nome}`;
+    }
+}
+
+console.log(personagem03.dados());
+
+// --------------------------------------------------------------
+
+//Entendendo loop
+for(let n = 0; n <= 10; n++) {
+    console.log('Contagem: ' + n);
+}
