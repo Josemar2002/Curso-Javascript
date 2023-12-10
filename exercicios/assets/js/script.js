@@ -89,6 +89,84 @@ console.log(personagem03.dados());
 // --------------------------------------------------------------
 
 //Entendendo loop
-for(let n = 0; n <= 10; n++) {
-    console.log('Contagem: ' + n);
+
+// let cores = ['preto', 'branco', 'azul', 'vermelho']
+// cores.push('verde', 'rosa', 'amarelo');
+
+// for(let n = 0; n < cores.length; n++) {
+//     console.log('Cores: ' + cores[n]);
+
+// }
+
+//loop no array
+// let cores = [
+//     {nome: 'preto ', qt: 10 },
+//     {nome:'azul', qt: 5 },
+//     {nome:'vermelho', qt: 15 }
+// ]
+
+
+// for(let i in cores) {
+//    cores[i].nome = cores[i].nome.toUpperCase()
+//    console.log(cores)
+// }
+
+//loop no array e objetos
+// let cores = [
+//     {nome: 'preto ', qt: 10 },
+//     {nome:'azul', qt: 5 },
+//     {nome:'vermelho', qt: 15 }
+// ]
+
+// for(let cor of cores) {
+//     console.log(`Nome: ${cor.nome} - ${cor.qt}`);
+// }
+
+//O loop while
+
+let numero = 0; 
+
+while (numero <= 10) { //um loop que executa para sempre e é semelhante ao if else
+    console.log(`O numero da vez é ${numero}`)
+    numero++;
 }
+
+// exercicos
+
+//1.Faça um loop que mostre todas as frutas
+
+let fruits = ['Maça', 'Uva', 'Banana',];
+console.log(fruits.join(', '))
+
+for (let x = 0; x < fruits.length; ++x) {
+   console.log('Fruta: ' +fruits[x])
+    
+} 
+
+//2. Conte de 1 até 100 atravé de um while
+let n1 = 1;
+
+while (n1 <= 100) {
+    console.log(`Numero: ${n1}`)
+    n1++;
+}
+// -------------------------------------------------------------
+let cars = [
+    {brand: 'fiat', year: 2022 },
+    {brand: 'BMW', year: 2018},
+    {brand: 'Ferrari', year: 2020}
+    
+]
+
+cars.sort((a, b) => {
+    return a.year - b.year;
+    // if (a.year > b.year) {
+    //     return 1 ;
+    // }else if (a.year < b.year) {
+    //     return -1 ;
+    // }else {
+    //     return 0 ;
+    // }
+})
+
+console.log(cars)
