@@ -1,3 +1,4 @@
+let log = new Log(document.querySelector('.log'));
 let char = new Guerreiro('josemar')
 console.log(char.name)
 let monster = new maximoMonster();
@@ -7,7 +8,8 @@ const senario = new Senario (
     char,
     monster,
     document.querySelector('#char'),
-    document.querySelector('#monster')
+    document.querySelector('#monster'),
+    log
 
 )
 
