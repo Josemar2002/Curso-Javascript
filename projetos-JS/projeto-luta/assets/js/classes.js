@@ -88,7 +88,7 @@ class Senario {
         if(atacou.life <= 0 || atacado.life <= 0){
             this.log.addMessage('Atacando cachorro morto.');
             return;
-        }
+        }   
 
         let attackFactor = (Math.random()* 2).toFixed(2);
         let defenseFactor = (Math.random()* 2).toFixed(2);
