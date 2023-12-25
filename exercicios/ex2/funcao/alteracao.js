@@ -44,11 +44,46 @@
  //usando o vento de click //Sempre tem dois paramentros para colocar o type do evento e o parementro que vai executar.
 
  //Manipulando elementos
+// function clicou(){
+//     // const teste = document.querySelector('#teste')
+//     // console.log(teste.children)  // .children retorna os filhos imediatos
+//     const ul = document.querySelector('ul')
+//     console.log(ul.children[0].innerHTML = 'alterado') 
+
+// }
+
+// function clicou(){
+//     const ul = document.querySelector('ul')
+
+//     let newli = document.createElement('li') //criando e adicionado um novo li
+//     newli.innerText = 'Item Adicionado';
+//     ul.appendChild(newli) 
+
+//     ul.children[0].append( "(alterado)")  //append adciona conteudo; //no final
+//     // ul.children[0].prepend( "(alterado)")  //append adciona conteudo; //no começo
+
+// }
+
+//Adicionando ELementos ao redor de um elemento
+//after() antes;
+//before() depois;
+
 function clicou(){
-    // const teste = document.querySelector('#teste')
-    // console.log(teste.children)  // .children retorna os filhos imediatos
+    const h1 = document.querySelector('h1')
+    const newH2 = document.createElement('h2')
+    newH2.innerHTML = '<em style="color: red">Josemar Rodrigues</em>'
+    h1.after(newH2)
+
+
     const ul = document.querySelector('ul')
-    console.log(ul.innerHTML) //conte
 
+    const newul = document.createElement('ul')
+            
+   for(let i = 1; i <= 5; i++) {
+     let newli = document.createElement('li');
+     newli.innerHTML = "Item add " + i;
+     newul.append(newli);
+   }
+
+   ul.after(newul)
 }
-
