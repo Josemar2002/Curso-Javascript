@@ -68,22 +68,66 @@
 //after() antes;
 //before() depois;
 
-function clicou(){
-    const h1 = document.querySelector('h1')
-    const newH2 = document.createElement('h2')
-    newH2.innerHTML = '<em style="color: red">Josemar Rodrigues</em>'
-    h1.after(newH2)
+// function clicou(){
+//     const h1 = document.querySelector('h1')
+//     const newH2 = document.createElement('h2')
+//     newH2.innerHTML = '<em style="color: red">Josemar Rodrigues</em>'
+//     h1.after(newH2)
 
 
-    const ul = document.querySelector('ul')
+//     const ul = document.querySelector('ul')
 
-    const newul = document.createElement('ul')
+//     const newul = document.createElement('ul')
             
-   for(let i = 1; i <= 5; i++) {
-     let newli = document.createElement('li');
-     newli.innerHTML = "Item add " + i;
-     newul.append(newli);
-   }
+//    for(let i = 1; i <= 5; i++) {  //Cria li dentro do ul acima com o limite que eu coloquei
+//      let newli = document.createElement('li');
+//      newli.innerHTML = "Item add " + i;
+//      newul.append(newli);
+//    }
 
-   ul.after(newul)
+//    ul.after(newul)
+// }
+
+
+//manipulando atributos 
+//.getAttribute (pega atributos)
+
+//.hasAttribute (para verificar se tem um atributo e ela sempre retorna um bolean)
+
+//  input.setAttribute('placeholder', 'Josemar') // altera um atributo e para isso exigi dois valores ('o nome do atributo' e ' o valor que vai passar a existir nele');
+
+//exemplo de alteração de atributo no input
+
+// function clicou() {
+//   const input = document.querySelector('input');
+//   const botao = document.querySelector('.botao')
+
+//   if(input.getAttribute('type') ==='text') {
+//     input.setAttribute('type', 'password')
+//     botao.innerText = "Mostrar Senha "
+//   }else {
+//     input.setAttribute('type', 'text') 
+//     botao.innerText = "Ocutar Senha" 
+//   }
+  
+
+// }
+
+//Manipulando ccs inline
+
+function clicou() {
+  const body = document.querySelector('body')
+  body.style.backgroundColor = '#3900ae'
+  
+  const h1 = document.querySelector('h1')
+
+  h1.style.fontSize = '60px'
+
+  const botao = document.querySelector('.botao')
+
+  botao.style.backgroundColor = 'green' 
+  botao.style.color = 'white'
+  botao.style.borderRadius = '15%'
+  botao.style.border = 'none'
+  botao.style.padding = '10px'
 }
