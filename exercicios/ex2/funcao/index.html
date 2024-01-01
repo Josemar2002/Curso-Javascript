@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body >
-    <h1>Função</h1>
-    <!-- <div id="teste"> -->
-        <ul>
-            <li> texto 1</li>
-            <li> texto 2</li>
-        </ul>
-    <!-- </div> -->
+  
+    <div class="fightarea">
+      <div id="char">
+        <div class="lifebar">
+            <div class="bar" style="width: 10%"> </div>
+        </div>
+        <strong class="name">--</strong>
+        <div>
+            <button class="attackButton">Atacar</button>
+        </div>
+      </div>
 
-  <input type="text" placeholder="Digite algo" >
+      <div id="monster">
+        <div class="lifebar">
+            <div class="bar" style="width: 10%"> </div>
+        </div>
+        <strong class="name">--</strong>
+        <div>
+            <button class="attackButton">Atacar</button>
+        </div>
+      </div>
+    </div>
 
+    <ul class="log"></ul>
 
-    <button class="botao azul" onclick="clicou()">Fazer ação</button>
-   <script src="orientacao-a-objeto.js" ></script> 
+   <script src="fuctions.js" ></script> 
+   <script src="script.js" ></script>
 </body>
 </html>
