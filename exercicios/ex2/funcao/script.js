@@ -1,4 +1,5 @@
-const char = createGuerreiro ('Josemar');
+const char = createMago ('Josemar');
+
 const monster = createVampiro();
 
 
