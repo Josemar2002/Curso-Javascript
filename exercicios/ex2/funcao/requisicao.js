@@ -42,10 +42,56 @@ console.log("Fim");
 
 
 //O que é um Callback?
-function  ft(){
-        alert('clicou no botão')
+//call back == liga de volta
+let clicou = () =>{ //fetch busca a url e cria a requisição e gera uma resposta
+        fetch('https://jsonplaceholder.typicode.com/posts').then((response) => {
+          return response.json(); //função json transforma resposta em objeto
+        })
+        .then((json) => { //then pega a resposta tranformada em objeto
+          alert(`O titulo da página: ${json[0].title}`)
+        })
+        .catch((error) => { // quando há um error na (requisição principal) essa função (exucuta)
+             alert('Deu erro no codigo' + error)//esse error mostra o (error)
+        })
+        .finally(() => { //dando certo ou errado essa função será executada no final da requisição
+          alert('Fim')
+        })
     }
 
-document.querySelector('#botao').addEventListener('click', ft)
+document.querySelector('#botao').addEventListener('click', clicou)
 
 
+// introdução aos methodos de requisição
+
+//post = postar 
+// get = pega alguma informação
+// put = quando a requisição tem a intenção de  adiconar uma informação
+// delete = quando a requisição tem a intenção de  deletar uma informação
+
+function inserir() {
+    fetch('https://jsonplaceholder.typicode.com/posts', 
+      {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'aplication/json'
+
+          },
+          body: JSON.stringify({
+            title: 'titulo de teste',
+            body: 'Corpo de teste',
+            userid: 2
+          })
+
+      })
+
+      .then((response) => {
+        return response.json()
+      })
+      .then((json) => {
+        console.log(json)        
+      })
+
+}
+
+
+document.querySelector('#botao').addEventListener('click', inserir)
