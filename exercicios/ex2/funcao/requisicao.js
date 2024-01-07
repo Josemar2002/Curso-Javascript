@@ -68,8 +68,9 @@ document.querySelector('#botao').addEventListener('click', clicou)
 // put = quando a requisição tem a intenção de  adiconar uma informação
 // delete = quando a requisição tem a intenção de  deletar uma informação
 
-function inserir() {
-    fetch('https://jsonplaceholder.typicode.com/posts', 
+async function inserir() {
+    let response = await fetch(
+      'https://jsonplaceholder.typicode.com/posts', 
       {
           method: 'POST',
           headers: {
@@ -84,14 +85,22 @@ function inserir() {
 
       })
 
-      .then((response) => {
-        return response.json()
-      })
-      .then((json) => {
-        console.log(json)        
-      })
+      let json = await response.json()
+     console.log(json)        
+      
 
 }
 
 
 document.querySelector('#botao').addEventListener('click', inserir)
+
+//Foçando a requisição ficar assicrona 
+//function com async = colocado para o javascript detectar o await /await = significa esperar
+async  function assincronaFocar() {
+   let reponse = await fetch('https://jsonplaceholder.typicode.com/posts')
+   let json = await reponse.json()
+   alert(`Titulo do primeiro post ${json[0].title}`)
+
+}
+
+document.querySelector('#botao').addEventListener('click', assincronaFocar)
