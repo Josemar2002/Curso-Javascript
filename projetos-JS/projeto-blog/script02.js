@@ -53,3 +53,16 @@ console.log(removeEspaço.trim()) //remove espaços inuteis
 let name02 = 'Josema bauzim de moura rodrigues'
 
     console.log(name02.split(' ')[4]) //transforma uma String em Array
+
+//Métodos de Numbers
+
+let n = 10;
+let n1 = 12.3766474674
+let n2 = '30'
+
+let result1 =  n.toString(); //transforma em string os numeros
+let result2 = parseInt(n2) + 5; //transforma string em números inteiros e (parseFloat tem a mesma função a deferença que ele preserva os decimais e exibi com virgúlas)
+console.log(result2)
+console.log(result1)
+let res = n1.toFixed(2) //pega duas casa decimais de números grandes (mais com base no numero colocado no parateses)
+console.log(' R$ '+ res)
