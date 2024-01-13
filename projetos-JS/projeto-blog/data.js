@@ -1,7 +1,3 @@
-let d = new Date();
-d.setHours(d.getHours() + 20)
-let novoValor = d
-console.log(novoValor)
 
 //conceitos sobre datas e manipulação de data
 
