@@ -44,7 +44,7 @@ let etapas = [
                     {url:'84.jpg', legenda:'Prefeito'},
                     {url:'84_2.jpg', legenda:'Vereador', small: true}
                  ]
-            } 
+            }, 
         ]
     }
 ]
